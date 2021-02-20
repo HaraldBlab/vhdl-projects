@@ -5,3 +5,7 @@ Vhdl related projects
 Solution of seven segment display sample from 
 https://vhdlwhiz.com/ 
 (absolute) beginner fast-track course.
+
+# seg7hex on Lattice iCEstick FPGA Evaluation Kit
+Seven segment display sample counting hexadecimals.
+

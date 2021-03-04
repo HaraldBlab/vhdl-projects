@@ -1,0 +1,12 @@
+set_io clk 21
+set_io rst_n 119  -pullup yes # J1, pin 10
+
+set_io digit_sel 91
+
+set_io segments[0] 78
+set_io segments[1] 79
+set_io segments[2] 80
+set_io segments[3] 81
+set_io segments[4] 87
+set_io segments[5] 88
+set_io segments[6] 90

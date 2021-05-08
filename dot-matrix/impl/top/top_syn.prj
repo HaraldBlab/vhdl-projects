@@ -1,0 +1,80 @@
+#--  Synopsys, Inc.
+#--  Version L-2016.09L+ice40
+#--  Project file C:\Users\Harald\Documents\VHDLwhiz\dot-matrix\impl\top\top_syn.prj
+#--  Written on Mon May 03 19:04:54 2021
+
+
+#project files
+
+
+
+add_file -vhdl -lib dot_matrix "../../char_buf/char_buf.vhd" 
+add_file -vhdl -lib dot_matrix "../../char_rom/char_rom.vhd" 
+add_file -vhdl -lib dot_matrix "../../led_controller_8x8/led_comtroller_8x8.vhd" 
+add_file -vhdl -lib dot_matrix "../../packages/charmap_pck.vhd" 
+add_file -vhdl -lib dot_matrix "../../packages/constants_pck.vhd" 
+add_file -vhdl -lib dot_matrix "../../packages/types_pck.vhd" 
+add_file -vhdl -lib dot_matrix "../../reset/reset.vhd" 
+add_file -vhdl -lib dot_matrix "../../top/debug_leds.vhd" 
+add_file -vhdl -lib dot_matrix "../../top/top.vhd" 
+add_file -vhdl -lib dot_matrix "../../uart/uart_rx.vhd" 
+add_file -vhdl -lib dot_matrix "../../uart/uart_tx.vhd" 
+#implementation: "top_Implmnt"
+impl -add top_Implmnt -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std v2001
+set_option -project_relative_includes 1
+
+#device options
+set_option -technology SBTiCE40
+set_option -part iCE40HX1K
+set_option -package TQ144
+set_option -speed_grade 
+set_option -part_companion ""
+
+#compilation/mapping options
+
+# hdl_compiler_options
+set_option -distributed_compile 0
+
+# mapper_without_write_options
+set_option -frequency auto
+set_option -srs_instrumentation 1
+
+# mapper_options
+set_option -write_verilog 0
+set_option -write_vhdl 0
+
+# Lattice iCE40
+set_option -maxfan 10000
+set_option -rw_check_on_ram 0
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -retiming 0
+set_option -update_models_cp 0
+set_option -fix_gated_and_generated_clocks 1
+set_option -run_prop_extract 1
+
+# NFilter
+set_option -no_sequential_opt 0
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "top_Implmnt/top.edf"
+impl -active top_Implmnt
+project -run synthesis -clean

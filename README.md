@@ -11,3 +11,8 @@ Seven segment display sample counting hexadecimals.
 
 ## seg7min on Lattice iCEstick FPGA Evaluation Kit
 Seven segment display minute timer counting from 59 to 0.
+
+## dot-matrix on Lattice iCEstick FPGA Evaluation Kit
+Solution of the dot matrix vhdl and fpga course 
+https://vhdlwhiz.com/ 
+

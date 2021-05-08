@@ -1,0 +1,56 @@
+#-- Synopsys, Inc.
+#-- Project file C:\Users\Harald\Documents\VHDLwhiz\dot-matrix\impl\char_buf\char_buf_syn.prj
+#project files
+add_file -vhdl -lib work "../../char_buf/char_buf.vhd"
+
+#implementation: "char_buf_Implmnt"
+impl -add char_buf_Implmnt -type fpga
+
+#implementation attributes
+set_option -vlog_std v2001
+set_option -project_relative_includes 1
+
+#device options
+set_option -technology SBTiCE40
+set_option -part iCE40HX1K
+set_option -package TQ144
+set_option -speed_grade 
+set_option -part_companion ""
+
+#compilation/mapping options
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 0
+set_option -write_vhdl 0
+
+# Silicon Blue iCE40
+set_option -maxfan 10000
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -retiming 0
+set_option -update_models_cp 0
+set_option -fixgatedclocks 2
+set_option -fixgeneratedclocks 0
+
+# NFilter
+set_option -popfeed 0
+set_option -constprop 0
+set_option -createhierarchy 0
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_format "edif"
+project -result_file ./char_buf_Implmnt/char_buf.edf
+project -log_file "./char_buf_Implmnt/char_buf.srr"
+impl -active "char_buf_Implmnt"
+project -run synthesis -clean

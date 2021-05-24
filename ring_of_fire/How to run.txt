@@ -1,0 +1,41 @@
+*******************************
+* How to simulate in ModelSim *
+*******************************
+
+1. Extract the Zip file
+
+2. Start ModelSim
+
+3. Type in the ModelSim console:
+    do PATH_TO_EXTRACTED_FILES/run.do
+
+4. Follow the instructions in the ModelSim console
+    (type "runtb" to run the testbench)
+
+
+*******************************************************************
+* How to implement the design on the Lattice iCEstick FPGA board  *
+*******************************************************************
+
+1. Start Lattice iCEcube2
+
+2. Choose File->Open Project and open
+	Lattice_iCEcube2_proj\ring_of_fire_sbt.project
+
+3. Choose Tool->Run All
+
+4. Start Lattice Diamond Programmer standalone version
+
+5. Choose "Open an existing programmer project" and open
+	Lattice_iCEcube2_proj/diamond.xcf
+
+6. Press "Detect Cable" while the iCEstick is plugged in
+
+7. Under the "File Name" column, click the '...'
+	to choose a programming file and find this file:
+	Lattice_iCEcube2_proj\ring_of_fire_Implmnt\sbt\outputs\bitmap\ring_of_fire_bitmap.bin
+	
+8. While the iCEstick is plugged into the USB port,
+	select Design->Program
+
+9 The green power-on LED on the iCEstick should start pulsing

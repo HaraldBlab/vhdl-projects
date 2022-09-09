@@ -1,0 +1,45 @@
+C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/top/top.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/top/top.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity top
+-- Compiling architecture rtl of top
+-- Loading entity reset
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading entity unipolar_stepper
+
+} {} {}} C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/top/top_tb.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/top/top_tb.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package ENV
+-- Compiling entity top_tb
+-- Compiling architecture sim of top_tb
+-- Loading entity top
+
+} {} {}} C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/reset.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/reset.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity reset
+-- Compiling architecture rtl of reset
+
+} {} {}} C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/unipolar_stepper.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/unipolar_stepper.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package NUMERIC_STD
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity unipolar_stepper
+-- Compiling architecture rtl of unipolar_stepper
+
+} {} {}}

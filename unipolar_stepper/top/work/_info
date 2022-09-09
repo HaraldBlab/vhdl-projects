@@ -1,0 +1,194 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper
+Ereset
+Z0 w1588238602
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 20
+Z4 dC:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/top
+Z5 8C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/reset.vhd
+Z6 FC:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/reset.vhd
+l0
+L5 1
+V4Y6Of29WmC4HQ4P<>G<Xo2
+!s100 gcOT[Nz5EIHWNH3;6?MHC3
+Z7 OT;C;2020.3;71
+32
+Z8 !s110 1662658195
+!i10b 1
+Z9 !s108 1662658195.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/reset.vhd|
+Z11 !s107 C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/reset.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+Z14 DEx4 work 5 reset 0 22 4Y6Of29WmC4HQ4P<>G<Xo2
+!i122 20
+l17
+L13 26
+V<WE^HB<H?nNM=>;ab?HJ:2
+!s100 S27E3KLZR?j_Ikfn`SgJ62
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Etop
+Z15 w1662658268
+R1
+R2
+R3
+!i122 26
+R4
+Z16 8C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/top/top.vhd
+Z17 FC:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/top/top.vhd
+l0
+L5 1
+V;`Q0KVWmF7`aTOY_Sz9]X2
+!s100 C5SY`Mem2W^8P?nQV61]41
+R7
+32
+Z18 !s110 1662658285
+!i10b 1
+Z19 !s108 1662658285.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/top/top.vhd|
+Z21 !s107 C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/top/top.vhd|
+!i113 1
+R12
+R13
+Artl
+Z22 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z23 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z24 DEx4 work 16 unipolar_stepper 0 22 _2@;6c^g]G53mAMj<@IPJ0
+R14
+R1
+R2
+R3
+Z25 DEx4 work 3 top 0 22 ;`Q0KVWmF7`aTOY_Sz9]X2
+!i122 26
+l25
+L13 33
+VN[T;lGMzlz@UC>ejnWHN10
+!s100 =:eS]KOAW`dECHzI>3gbl2
+R7
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Etop_tb
+Z26 w1662658487
+Z27 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+R1
+R2
+R3
+!i122 30
+R4
+Z28 8C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/top/top_tb.vhd
+Z29 FC:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/top/top_tb.vhd
+l0
+L8 1
+Vgge8VlJJ0z4Qn071CQm;B1
+!s100 1nfN:Xdj?6[[Yj^6lA`[]2
+R7
+33
+Z30 !s110 1662658491
+!i10b 1
+Z31 !s108 1662658491.000000
+Z32 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/top/top_tb.vhd|
+Z33 !s107 C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/top/top_tb.vhd|
+!i113 1
+Z34 o-work work -2008 -explicit -O0
+R13
+Asim
+R25
+R27
+R1
+R2
+R3
+Z35 DEx4 work 6 top_tb 0 22 gge8VlJJ0z4Qn071CQm;B1
+!i122 30
+l27
+L11 69
+V3RmoOT@AU:LbYb?b`D7bn3
+!s100 7E6<XJ_=PZlgUfYSM2QNk0
+R7
+33
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R34
+R13
+Eunipolar_stepper
+Z36 w1662401065
+R22
+R1
+R23
+R2
+R3
+!i122 21
+R4
+Z37 8C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/unipolar_stepper.vhd
+Z38 FC:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/unipolar_stepper.vhd
+l0
+L10 1
+V_2@;6c^g]G53mAMj<@IPJ0
+!s100 10UHf4[cmBe0^gl9b]BG90
+R7
+32
+R8
+!i10b 1
+R9
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/unipolar_stepper.vhd|
+Z40 !s107 C:/Users/Harald/Documents/VHDLwhiz/unipolar_stepper/unipolar_stepper.vhd|
+!i113 1
+R12
+R13
+Artl
+R22
+R1
+R23
+R2
+R3
+R24
+!i122 21
+l23
+L22 44
+V:h5CNNESAK;@1Q[kejBM63
+!s100 0E5UTacz;^KQZBSogX[770
+R7
+32
+R8
+!i10b 1
+R9
+R39
+R40
+!i113 1
+R12
+R13

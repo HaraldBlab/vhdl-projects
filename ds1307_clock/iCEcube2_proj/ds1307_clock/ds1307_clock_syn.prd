@@ -1,0 +1,13 @@
+#--  Synopsys, Inc.
+#--  Version L-2016.09L+ice40
+#--  Project file C:\Users\Harald\Documents\VHDLwhiz\ds1307_clock\iCEcube2_proj\ds1307_clock\ds1307_clock_syn.prd
+#--  Written on Wed Dec 28 19:06:52 2022
+
+#
+### Watch Implementation type ###
+#
+watch_impl -all
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear

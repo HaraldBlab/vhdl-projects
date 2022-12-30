@@ -1,0 +1,38 @@
+The module has a simple I2C interface that takes up two addresses. 
+The DS1307 RTC chip’s fixed I2C address is 0x68, and the 24C32 EEPROM’s fixed I2C address is 0x50.
+
+df1307.pfd p11
+  Write address: 110 1000 + 0 = 11010000 = d0
+  Read address : 110 1000 + 1 = 11010001 = d1
+
+df1307.pfd p8
+  Timekeeping registers
+
+Bus reset:
+\h(00)
+
+Setup read of reg 00h:
+\h(01 02 d0 02 00 05)
+
+Read reg 00h:
+\h(01 02 d1 04 05)
+
+Setup and read reg 00h:
+\h(01 02 d0 02 00 05 01 02 d1 04 05)
+
+Setup and read reg 00h (should be 80h after clear):
+\h(01 02 d0 02 00 05 01 02 d1 04 05)
+
+Reading first 2 bytes:
+\h(01 02 d0 02 00 05 01 02 d1 03 04 05)
+
+Enable oscillator (disable CH - clock halt):
+\h(01 02 d0 02 00 02 00 05)
+
+Disable oscillator (enable CH - clock halt):
+\h(01 02 d0 02 00 02 80 05)
+
+Clear the first 4 bytes:
+\h(01 02 d0 02 00 02 00 02 00 02 00 02 00 05)
+
+END.

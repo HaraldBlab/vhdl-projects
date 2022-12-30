@@ -22,3 +22,6 @@ https://vhdlwhiz.com/breathing-led-using-sine-wave-stored-in-block-ram/
 
 ## unipolar-stepper on Lattice iCEstick FPGA Evaluation Kit
 Rotates an unipolar stepper motor at constant velocity
+
+## ds1307_clock on Lattice iCEstick FPGA Evaluation Kit
+Interfaces ds1307 clock using a generic i2c controller and a python script

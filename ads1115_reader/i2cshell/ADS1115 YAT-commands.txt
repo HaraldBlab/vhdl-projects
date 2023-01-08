@@ -1,0 +1,57 @@
+Der ADS1115-Chip besitzt einen Adresseingang ADDR. 
+Durch Beschaltung des Adresseinganges mit GND, VCC, SDA oder SCL kann der ADS1115 auf 4 mögliche Adressen 
+(0x48 bis 0x4B) eingestellt werden.
+
+ads1115.pdf p23
+  Write address: 100 1000 + 0 = 10010000 = 90
+  Read address : 100 1000 + 1 = 10010001 = 91
+
+ads1115.pdf p35ff
+  Quick start guid
+
+Bus reset:
+\h(00)
+
+For example, to write to the configuration register to set the ADS:
+
+Write to config register (01=config register, 
+  MSB=84 8=start a single conversion 000=A0 and A1=differntial, 4=FSR += 0.512V, 
+  LSB=83 8=continuous, 000=8 SPS,3=disable comparator):
+\h(01 02 90 02 01 02 84 02 83 05)
+
+Write to config register A0 only (01=config register, 
+  MSB=C0 8=start a single conversion, 100=MUX - A0 only, 0=PGA FSR +- 6.144V, 
+  LSB=83 8=continuous, 000=8 SPS,3=disable comparator):
+\h(01 02 90 02 01 02 C4 02 83 05)
+
+Write to config register A1 only (01=config register, 
+  MSB=D4 8=start a single conversion 101=10 only, 4=FSR += 0.512V, 
+  LSB=83 8=continuous, 000=8 SPS,3=disable comparator):
+\h(01 02 90 02 01 02 D4 02 83 05)
+
+Write to address pointer (0=conversion register):
+\h(01 02 90 02 00 05)
+
+Read conversion register (MSB,LSB for A0, MSB,LSB for A1):
+\h(01 02 91 03 04 05)
+
+Returns 39h b0h if nothing is connected
+
+Write to Lo_thres register (02=Lo_thresh):
+\h(01 02 90 02 02 05)
+
+Read from Lo_thres register
+\h(01 02 90 02 02 05 01 02 91 03 04 05)
+
+Write to Hi_thres register (03=Hi_thresh):
+\h(01 02 90 02 03 05)
+
+Read from Hi_thres register
+\h(01 02 90 02 03 05 01 02 91 03 04 05)
+
+
+Read a single value from conversion register (0=conversion)
+\h(01 02 90 02 00 05 01 02 91 03 04 05)
+
+Configure A0 und read single value
+\h(01 02 90 02 01 02 84 02 83 05 01 02 90 02 00 05 01 02 91 03 04 05)

@@ -25,3 +25,6 @@ Rotates an unipolar stepper motor at constant velocity
 
 ## ds1307_clock on Lattice iCEstick FPGA Evaluation Kit
 Interfaces ds1307 clock using a generic i2c controller and a python script
+
+## ads1115 reader on Lattice iCEstick FPGA Evaluation Kit
+Interfaces ds1307 ADC using a generic i2c controller and a python script

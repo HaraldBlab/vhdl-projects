@@ -1,0 +1,13 @@
+#--  Synopsys, Inc.
+#--  Version L-2016.09L+ice40
+#--  Project file C:\Users\Harald\Documents\VHDLwhiz\ads1115_reader\ads1115_demo\icecube2_icestick\ads1115_demo\ads1115_demo_syn.prd
+#--  Written on Sat Jan 07 17:27:27 2023
+
+#
+### Watch Implementation type ###
+#
+watch_impl -all
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear

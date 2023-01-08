@@ -1,0 +1,8 @@
+1.0.1 (2022-02-17)
+
+    * Added syn_preserve synthesis attribute for Synopsis/Synplify Pro to avoid
+      pruning of registers if rst_in is set to a constant instead of an input pin
+
+1.0.0 (2021-08-16)
+
+    * Initial release

@@ -1,5 +1,5 @@
 # ads1115 reader on Lattice iCEstick FPGA Evaluation Kit
-Interfaces ds1307 ADC using a generic i2c controller and a python script
+Interfaces ads1115 ADC using a generic i2c controller and a python script
 
 ## Hardware
 Lattice iCEstick FPGA Evaluation Kit

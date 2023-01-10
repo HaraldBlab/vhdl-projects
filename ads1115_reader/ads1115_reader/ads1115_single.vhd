@@ -4,6 +4,9 @@ use ieee.numeric_std.all;
 
 -- start a single conversion
 entity ads1115_single is
+  generic(
+    target_addr : std_logic_vector(6 downto 0) := "1001000"
+  );
   port (
     clk : in std_logic;
     rst : in std_logic;
@@ -18,6 +21,9 @@ entity ads1115_single is
     read_tvalid : in std_logic;
     read_tready : inout std_logic;   -- out only in 2008
     
+    -- The ADS111x configuration
+    config : in std_logic_vector(15 downto 0);
+
     -- The ADS111x provide 16 bits of data in binary two's complement format
     ready : in std_logic;
     valid : out std_logic;
@@ -27,14 +33,15 @@ end ads1115_single;
 
 architecture rtl of ads1115_single is
 
-  constant write_addr : std_logic_vector(7 downto 0) := x"90";
-  constant read_addr : std_logic_vector(7 downto 0) := x"91";
+  constant write_addr : std_logic_vector(7 downto 0) := target_addr & '0';
+  constant read_addr : std_logic_vector(7 downto 0) := target_addr & '1';
   -- configuration register (to define the value we want to read)
   constant config_reg : std_logic_vector(7 downto 0) := x"01";
-  constant config_lsb : std_logic_vector(7 downto 0) := x"C4";
-  constant config_msb : std_logic_vector(7 downto 0) := x"83";
   -- conversion register (to read values from)
   constant conversion_reg : std_logic_vector(7 downto 0) := x"00";
+
+  signal config_lsb : std_logic_vector(7 downto 0) := x"00";
+  signal config_msb : std_logic_vector(7 downto 0) := x"00";
 
   type state_type is (IDLE, WRITE, READ);
   signal state : state_type := IDLE; 
@@ -77,6 +84,8 @@ begin
           end if;
 
           if (ready = '1' and single_shot = '1') then
+            config_msb <= config(15 downto 8);
+            config_lsb <= config(7 downto 0);
             state <= WRITE;
           end if;
           
@@ -96,9 +105,9 @@ begin
             when 3 => write_tdata <= x"02";
             when 4 => write_tdata <= config_reg;
             when 5 => write_tdata <= x"02";
-            when 6 => write_tdata <= config_lsb;
+            when 6 => write_tdata <= config_msb;
             when 7 => write_tdata <= x"02";
-            when 8 => write_tdata <= config_msb;
+            when 8 => write_tdata <= config_lsb;
             when 9 => write_tdata <= x"05"; -- state <= WAIT_STOP;
             -- write to address register
             when 10 => write_tdata <= x"01";

@@ -26,6 +26,10 @@ architecture sim of ads1115_reader_tb is
   -- I2C
   signal scl : std_logic := 'H';
   signal sda : std_logic := 'H';
+  -- ADS1115 configuration register
+  constant config_lsb : std_logic_vector(7 downto 0) := x"C4";
+  constant config_msb : std_logic_vector(7 downto 0) := x"83";
+  constant config : std_logic_vector(15 downto 0) := config_msb & config_lsb;
   -- reader handling
   signal ready : std_logic := '0';
   signal valid : std_logic := '0';
@@ -39,6 +43,8 @@ begin
   port map (
     clk => clk,
     rst => rst,
+    -- configuation
+    config => config,
     -- AXI style
     ready => ready,
     valid => valid,

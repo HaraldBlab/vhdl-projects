@@ -40,6 +40,32 @@ architecture rtl of top is
   -- This counter controls how often samples are fetched and sent
   signal clk_counter : unsigned(clk_counter_bits - 1 downto 0);
 
+  -- ADS1115 configuration register
+  -- configuration MSB predefines
+  constant OS_SINGLE : std_logic := '1';
+  constant MUX_AIN0_GND : std_logic_vector(2 downto 0) := "100";
+  constant PGA_FSR_6144 : std_logic_vector(2 downto 0) := "000";
+  constant PGA_FSR_2048 : std_logic_vector(2 downto 0) := "010";
+  constant MODE_SINGLE : std_logic := '1';
+  constant MODE_CONTINOUS : std_logic := '0';
+  ---
+  constant config_msb : std_logic_vector(7 downto 0) := 
+    OS_SINGLE & MUX_AIN0_GND & 
+    PGA_FSR_6144 & MODE_CONTINOUS;
+  
+  -- configuration LSB predefines
+  constant DR_SPS_128 : std_logic_vector(2 downto 0) := "100";
+  constant COMP_MODE_TRADITIONAL : std_logic := '0';
+  constant COMP_POL_LOW : std_logic := '0';
+  constant COMP_LAT_NONLATCHING : std_logic := '0';
+  constant COMP_QUE_DISABLE : std_logic_vector(1 downto 0) := "11";
+  ---
+  constant config_lsb : std_logic_vector(7 downto 0) := 
+    DR_SPS_128 & COMP_MODE_TRADITIONAL & 
+    COMP_POL_LOW & COMP_LAT_NONLATCHING & COMP_QUE_DISABLE;
+  -- configuration used
+  constant config : std_logic_vector(15 downto 0) := config_msb & config_lsb;
+  
   -- data recevied from the READER
   signal output_data : std_logic_vector(15 downto 0);
 
@@ -67,6 +93,8 @@ begin
       -- I2C
       scl => scl,
       sda => sda,
+      -- configuration
+      config => config,
       -- AXI style
       ready => ready,
       valid => valid,

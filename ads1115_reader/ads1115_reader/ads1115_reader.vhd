@@ -14,6 +14,8 @@ entity ads1115_reader is
     -- I2C
     scl : out std_logic;
     sda : inout std_logic;
+    -- The ADS111x configuration
+    config : in std_logic_vector(15 downto 0);
     -- AXI style
     ready : in std_logic;
     valid : out std_logic;
@@ -62,6 +64,8 @@ begin
     read_tdata => read_tdata,
     read_tvalid => read_tvalid,
     read_tready => read_tready,
+    -- configuation
+    config => config,
     -- value read
     ready => output_tready,
     valid => output_tvalid,

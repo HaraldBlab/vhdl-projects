@@ -4,7 +4,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2020.12.27943 - Bui
 ProjectName=ads1115_demo
 Vendor=SiliconBlue
 Synthesis=synplify
-ProjectVFiles=../top_icestick.vhd=work,../../top.vhd=work,../../../i2c/i2c_controller.vhd=work,../../../ads1115_reader/ads1115_reader.vhd=work,../../../uart/uart_src/uart_tx.vhd=work,../../../ads1115_reader/ads1115_single.vhd=work,../../../reset_sync/reset_sync.vhd=work
+ProjectVFiles=../top_icestick.vhd=work,../../top.vhd=work,../../../i2c/i2c_controller.vhd=work,../../../ads1115_reader/ads1115_reader.vhd=work,../../../uart/uart_src/uart_tx.vhd=work,../../../ads1115_reader/ads1115_single.vhd=work,../../../reset_sync/reset_sync.vhd=work,../../../ads1115_reader/ads1115_config_pck.vhd=work
 ProjectCFiles=../top_icestick.sdc
 CurImplementation=ads1115_demo_Implmnt
 Implementations=ads1115_demo_Implmnt

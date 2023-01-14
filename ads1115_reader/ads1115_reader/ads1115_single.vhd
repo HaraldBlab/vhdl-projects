@@ -163,7 +163,7 @@ begin
             else
               value(7 downto 0) <= read_tdata;
             end if;
-            -- value <= x"ABCD";
+            -- value <= config;
 
             state <= WRITE;
 

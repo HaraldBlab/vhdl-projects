@@ -6,7 +6,8 @@ entity ads1115_reader is
   generic (
     -- Defaults for the Lattice iCEstick board
     clk_hz : integer := 12e6;
-    i2c_hz : integer := 100e3
+    i2c_hz : integer := 100e3;
+    target_addr : std_logic_vector(6 downto 0) := "1001000"
   );
   port (
     clk : in std_logic;
@@ -53,6 +54,9 @@ begin
 
   -- ADS1115 target reading a single value
   SINGLE : entity work.ads1115_single(rtl)
+  generic map (
+    target_addr => target_addr
+  )
   port map (
     clk => clk,
     rst => rst,

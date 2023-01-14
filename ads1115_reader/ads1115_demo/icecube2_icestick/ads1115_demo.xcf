@@ -18,8 +18,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/Users/Harald/Documents/VHDLwhiz/ads1115_reader/ads1115_demo/icecube2_icestick/ads1115_demo/ads1115_demo_Implmnt/sbt/outputs/bitmap/top_icestick_bitmap.bin</File>
-			<FileTime>01/07/23 20:12:40</FileTime>
-			<JedecChecksum>0x2AF1</JedecChecksum>
+			<FileTime>01/14/23 14:26:36</FileTime>
+			<JedecChecksum>0x03C5</JedecChecksum>
 			<Operation>SPI Flash Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

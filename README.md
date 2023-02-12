@@ -28,3 +28,6 @@ Interfaces ds1307 clock using a generic i2c controller and a python script
 
 ## ads1115 reader on Lattice iCEstick FPGA Evaluation Kit
 Interfaces ads1115 ADC using a generic i2c controller and a python script
+
+## joystick reader on Lattice iCEstick FPGA Evaluation Kit
+Interfaces 2 channels of the ads1115 ADC using the generic i2c controller and a python script

@@ -1,0 +1,15 @@
+https://ugur-ozgur.gen.tr/blog/index.php/2020/05/10/hc-sr04-with-fpga/
+
+I used an “Arow CYC1000” FPGA board which includes an “10CL025YU256C8G” IC from “Intel Cyclone 10 LP” FPGA family. 
+I connected the “ECHO” and “TRIG” pins of the sensor to the FPGA through a bi-directional logic voltage converter circuit. 
+CYC1000 board has a 12MHz oscillator inside and I designed the digital system so as to work with a 12Mhz clock.
+
+HC-SR04 is a distance measurement sensor, which radiates sound and listens for the reflected sound. 
+Since the speed of sound in air is near to 1/29 centimeters per microsecond, 
+[travel time of the sound in microseconds] / 58 gives the distance between the sensor and the obstacle. 
+We must divide the travel time by 58 instead of 29 because the sound travels the distance one more time after the reflection.
+
+A 10 microseconds trigger signal is required to start the measurement then the HC-SR04 responses with an echo signal. 
+The duration of the echo signal equals to the travel duration of the sound, which travels between sensor and the obstacle twice. 
+Our digital system counts microseconds while the echo signal is on ‘high’ level and compares the counted value with the multiples of 58. 
+An LED turns on or off on FPGA board for every 5 centimeters of distance.

@@ -31,3 +31,6 @@ Interfaces ads1115 ADC using a generic i2c controller and a python script
 
 ## joystick reader on Lattice iCEstick FPGA Evaluation Kit
 Interfaces 2 channels of the ads1115 ADC using the generic i2c controller and a python script
+
+## ultrasonic_distance on Lattice iCEstick FPGA Evaluation Kit
+Detects the distance to an object and show result the result on a led bar.
